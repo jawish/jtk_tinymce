@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TinyMCE with Thaana Plugin Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <h1>TinyMCE with Thaana Plugin Demo</h1>
+
+        <div id="editor"></div>
+
+        <p><a href="http://www.github.com/jawish/jtk_tinymce">JTK TinyMCE on Github</a></p>
+
+        <script src="http://www.jawish.org/blog/uploads/jtk-4.2.1.pack.js"></script>
+        <script src="http://tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+        <script>
+        thaanaKeyboard.defaultKeyboard = 'phonetic';
+        tinymce.init({
+            selector:'#editor',
+            toolbar: 'jtklanguage',
+            external_plugins: {
+                "jtk": "https://cdn.rawgit.com/jawish/jtk_tinymce/master/plugin.min.js",
+            }
+        });
+        </script>
+    </body>
+</html>
